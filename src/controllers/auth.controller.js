@@ -2,6 +2,8 @@ import bcrypt from "bcrypt";
 import { createUser, findUserByEmail } from "../models/user.model.js";
 import db from "../config/db.js";
 
+
+// New register controller
 export const register = async (req, res) => {
   const { email, password } = req.body;
 
@@ -23,7 +25,7 @@ export const register = async (req, res) => {
   }
 };
 
-
+// New login controller
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
